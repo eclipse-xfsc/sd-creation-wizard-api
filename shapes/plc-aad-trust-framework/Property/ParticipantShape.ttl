@@ -1,0 +1,9 @@
+@prefix gx: <https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gx:ParticipantShape a sh:NodeShape ;
+                    sh:nodeKind sh:IRI ;
+                    sh:targetClass gx:LegalParticipant,
+                    gx:Participant .

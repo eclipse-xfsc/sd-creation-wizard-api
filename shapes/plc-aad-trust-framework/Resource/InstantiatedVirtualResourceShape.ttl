@@ -1,0 +1,44 @@
+@prefix gx: <https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gx:InstantiatedVirtualResourceShape a sh:NodeShape ;
+                                    sh:closed false ;
+                                    sh:description "An Instantiated Virtual Resource is an instance from a Virtual Resource, and is a running resource exposing endpoints such as, and not limited to, a running process, an online API, a network connection, a virtual machine, a container, an operating system. " ;
+                                    sh:name "Instantiated Virtual Resource" ;
+                                    sh:property [ sh:description "A resource where the process is located (physical server, datacenter, availability zone, …)." ;
+                                                  sh:maxCount 1 ;
+                                                  sh:minCount 1 ;
+                                                  sh:name "hosted on" ;
+                                                  sh:or ( [ sh:class gx:VirtualResource ] [ sh:class gx:PhysicalResource ] [ sh:class gx:DataResource ] [ sh:class gx:SoftwareResource ] ) ;
+                                                  sh:order 1 ;
+                                                  sh:path gx:hostedOn ],
+                                    [ sh:description "A virtual resource (normally a software resource) this process is an instance of." ;
+                                      sh:maxCount 1 ;
+                                      sh:minCount 1 ;
+                                      sh:name "instance of" ;
+                                      sh:or ( [ sh:class gx:VirtualResource ] [ sh:class gx:DataResource ] [ sh:class gx:SoftwareResource ] ) ;
+                                      sh:order 2 ;
+                                      sh:path gx:instanceOf ],
+                                    [ sh:class gx:ServiceAccessPoint ;
+                                      sh:description "A list of Service Access Point which can be an endpoint as a mean to access and interact with the resource." ;
+                                      sh:minCount 1 ;
+                                      sh:name "service access point" ;
+                                      sh:nodeKind sh:IRI ;
+                                      sh:order 4 ;
+                                      sh:path gx:serviceAccessPoint ],
+                                    [ sh:description "A list of participant maintaining the resource in operational condition." ;
+                                      sh:minCount 1 ;
+                                      sh:name "maintained by" ;
+                                      sh:class gx:LegalParticipant ;
+                                      sh:nodeKind sh:IRI ;
+                                      sh:order 0 ;
+                                      sh:path gx:maintainedBy ],
+                                    [ sh:description "A list of participant with contractual relation with the resource." ;
+                                      sh:name "tenant owned by" ;
+                                      sh:class gx:LegalParticipant ;
+                                      sh:nodeKind sh:IRI ;
+                                      sh:order 3 ;
+                                      sh:path gx:tenantOwnedBy ] ;
+                                    sh:targetClass gx:InstantiatedVirtualResource .

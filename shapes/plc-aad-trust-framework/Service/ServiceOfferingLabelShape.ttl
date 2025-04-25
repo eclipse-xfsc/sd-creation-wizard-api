@@ -1,0 +1,19 @@
+@prefix gx: <https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gx:ServiceOfferingLabelShape a sh:NodeShape ;
+                             sh:property [ sh:description "a resolvable link to the service offering self-description to which label level is assigned to." ;
+                                           sh:maxCount 1 ;
+                                           sh:minCount 1 ;
+                                           sh:name "Assigned to" ;
+                                           sh:or ( [ sh:class gx:ServiceOffering ] [sh:node gx:ServiceOfferingShape ] ) ;
+                                           sh:path gx:assignedTo ],
+                             [ sh:description "Gaia-X Policy Rules and Labelling Criteria for Providers" ;
+                               sh:maxCount 1 ;
+                               sh:minCount 1 ;
+                               sh:name "Criteria" ;
+                               sh:node gx:ServiceOfferingCriteriaShape ;
+                               sh:path gx:criteria ] ;
+                             sh:targetClass gx:ServiceOfferingLabelLevel1 .

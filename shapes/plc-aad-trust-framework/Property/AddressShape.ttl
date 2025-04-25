@@ -1,0 +1,36 @@
+@prefix gx: <https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.w3.org/2006/vcard/ns#AddressShape> a sh:NodeShape ;
+                                               sh:closed false ;
+                                               sh:description "Full address of the entity." ;
+                                               sh:ignoredProperties ( rdf:type ) ;
+                                               sh:property [ sh:datatype xsd:string ;
+                                                             sh:description "String of a street-address" ;
+                                                             sh:maxCount 1 ;
+                                                             sh:order 3 ;
+                                                             sh:path <http://www.w3.org/2006/vcard/ns#postal-code> ],
+                                               [ sh:description "Country code in ISO 3166-1 alpha2, alpha-3 or numeric format." ;
+                                                 sh:maxCount 1 ;
+                                                 sh:minCount 1 ;
+                                                 sh:in ( "AF" "EG" "AX" "AL" "DZ" "VI" "UM" "AS" "AD" "AO" "AI" "AQ" "AG" "GQ" "SY" "AR" "AM" "AW" "AZ" "ET" "AU" "BS" "BH" "BD" "BB" "BE" "BZ" "BJ" "BM" "BT" "VE" "BQ" "BA" "BW" "BV" "BR" "VG" "IO" "BN" "BG" "BF" "BI" "CV" "CL" "CN" "CK" "CR" "CI" "CW" "DK" "CD" "KP" "LA" "DE" "DM" "DO" "DJ" "EC" "MK" "SV" "ER" "EE" "FK" "FO" "FJ" "FI" "FM" "FR" "TF" "GF" "PF" "GA" "GM" "GE" "GH" "GI" "GD" "GR" "GL" "GP" "GU" "GT" "GG" "GN" "GW" "GY" "HT" "HM" "HN" "HK" "IN" "ID" "IM" "IQ" "IE" "IR" "IS" "IL" "IT" "JM" "JP" "YE" "JE" "JO" "KY" "KH" "CM" "CA" "KZ" "QA" "KE" "KG" "KI" "CC" "CO" "KM" "CG" "HR" "CU" "KW" "LS" "LV" "LB" "LR" "LY" "LI" "LT" "LU" "MO" "MG" "MW" "MY" "MV" "ML" "MT" "MP" "MA" "MH" "MQ" "MR" "MU" "YT" "MX" "MC" "MN" "MS" "ME" "MZ" "MM" "NA" "NR" "NP" "NC" "NZ" "NI" "NL" "NE" "NG" "NU" "NF" "False" "OM" "AT" "PK" "PW" "PS" "PA" "PG" "PY" "PE" "PH" "PN" "BO" "PL" "PT" "PR" "KR" "MD" "RE" "RW" "RO" "RU" "SB" "ZM" "WS" "SM" "ST" "SA" "SE" "CH" "SN" "RS" "SC" "SL" "ZW" "SG" "SK" "SI" "SO" "ES" "LK" "BL" "SH" "KN" "LC" "MF" "SX" "PM" "VC" "ZA" "SD" "GS" "SS" "SR" "SJ" "SZ" "TJ" "TW" "TH" "TL" "TG" "TK" "TO" "TT" "TD" "CZ" "TN" "TR" "TM" "TC" "TV" "UG" "UA" "HU" "UY" "UZ" "VU" "VA" "AE" "TZ" "US" "GB" "VN" "WF" "CX" "BY" "EH" "CF" "CY"  "AFG" "ALA" "ALB" "DZA" "ASM" "AND" "AGO" "AIA" "ATA" "ATG" "ARG" "ARM" "ABW" "AUS" "AUT" "AZE" "BHS" "BHR" "BGD" "BRB" "BLR" "BEL" "BLZ" "BEN" "BMU" "BTN" "BOL" "BES" "BIH" "BWA" "BVT" "BRA" "IOT" "BRN" "BGR" "BFA" "BDI" "KHM" "CMR" "CAN" "CPV" "CYM" "CAF" "TCD" "CHL" "CHN" "CXR" "CCK" "COL" "COM" "COG" "COD" "COK" "CRI" "CIV" "HRV" "CUB" "CUW" "CYP" "CZE" "DNK" "DJI" "DMA" "DOM" "ECU" "EGY" "SLV" "GNQ" "ERI" "EST" "ETH" "FLK" "FRO" "FJI" "FIN" "FRA" "GUF" "PYF" "ATF" "GAB" "GMB" "GEO" "DEU" "GHA" "GIB" "GRC" "GRL" "GRD" "GLP" "GUM" "GTM" "GGY" "GIN" "GNB" "GUY" "HTI" "HMD" "VAT" "HND" "HKG" "HUN" "ISL" "IND" "IDN" "IRN" "IRQ" "IRL" "IMN" "ISR" "ITA" "JAM" "JPN" "JEY" "JOR" "KAZ" "KEN" "KIR" "PRK" "KOR" "XKX" "KWT" "KGZ" "LAO" "LVA" "LBN" "LSO" "LBR" "LBY" "LIE" "LTU" "LUX" "MAC" "MKD" "MDG" "MWI" "MYS" "MDV" "MLI" "MLT" "MHL" "MTQ" "MRT" "MUS" "MYT" "MEX" "FSM" "MDA" "MCO" "MNG" "MNE" "MSR" "MAR" "MOZ" "MMR" "NAM" "NRU" "NPL" "NLD" "NCL" "NZL" "NIC" "NER" "NGA" "NIU" "NFK" "MNP" "NOR" "OMN" "PAK" "PLW" "PSE" "PAN" "PNG" "PRY" "PER" "PHL" "PCN" "POL" "PRT" "PRI" "QAT" "SRB" "REU" "ROU" "RUS" "RWA" "BLM" "SHN" "KNA" "LCA" "MAF" "SPM" "VCT" "WSM" "SMR" "STP" "SAU" "SEN" "SYC" "SLE" "SGP" "SXM" "SVK" "SVN" "SLB" "SOM" "ZAF" "SGS" "SSD" "ESP" "LKA" "SDN" "SUR" "SJM" "SWZ" "SWE" "CHE" "SYR" "TWN" "TJK" "TZA" "THA" "TLS" "TGO" "TKL" "TON" "TTO" "TUN" "TUR" "XTX" "TKM" "TCA" "TUV" "UGA" "UKR" "ARE" "GBR" "USA" "UMI" "URY" "UZB" "VUT" "VEN" "VNM" "VGB" "VIR" "WLF" "ESH" "YEM" "ZMB" "ZWE"  "4" "818" "248" "008" "10" "850" "581" "14" "16" "20" "660" "8" "028" "226" "760" "26" "41" "231" "30" "36" "048" "40" "42" "46" "084" "204" "48" "52" "58" "60" "62" "092" "086" "854" "108" "132" "152" "156" "184" "188" "384" "531" "208" "180" "408" "418" "276" "212" "214" "262" "218" "807" "222" "232" "233" "238" "234" "242" "246" "583" "250" "260" "254" "258" "266" "270" "268" "288" "292" "308" "300" "304" "312" "316" "320" "831" "324" "624" "328" "332" "334" "340" "344" "356" "360" "833" "368" "372" "364" "352" "376" "380" "388" "392" "887" "832" "400" "136" "116" "120" "124" "398" "634" "404" "417" "296" "166" "170" "174" "178" "191" "192" "414" "426" "428" "422" "430" "434" "438" "440" "442" "446" "450" "454" "458" "462" "466" "470" "580" "504" "584" "474" "478" "480" "175" "484" "492" "496" "500" "499" "508" "104" "516" "520" "524" "540" "554" "558" "528" "562" "566" "570" "574" "578" "512" "32" "586" "585" "275" "591" "598" "600" "604" "608" "612" "068" "616" "620" "630" "410" "498" "638" "646" "642" "643" "090" "894" "882" "674" "678" "682" "752" "756" "686" "688" "690" "694" "716" "702" "703" "705" "706" "724" "144" "652" "654" "659" "662" "663" "534" "666" "670" "710" "729" "239" "728" "740" "744" "748" "762" "158" "764" "626" "768" "772" "776" "780" "148" "203" "788" "792" "795" "796" "798" "800" "804" "348" "858" "860" "548" "336" "784" "834" "840" "826" "704" "876" "162" "112" "732" "140" "196" ) ;
+                                                 sh:order 0 ;
+                                                 sh:path gx:countryCode ],
+                                               [ sh:datatype xsd:string ;
+                                                 sh:description "The v:locality property specifies the locality (e.g., city) of a postal address." ;
+                                                 sh:maxCount 1 ;
+                                                 sh:order 4 ;
+                                                 sh:path <http://www.w3.org/2006/vcard/ns#locality> ],
+                                               [ sh:datatype xsd:string ;
+                                                 sh:description "the street address of a postal address" ;
+                                                 sh:maxCount 1 ;
+                                                 sh:order 2 ;
+                                                 sh:path <http://www.w3.org/2006/vcard/ns#street-address> ],
+                                               [ sh:datatype xsd:string ;
+                                                 sh:description "GPS in ISO 6709:2008/Cor 1:2009 format." ;
+                                                 sh:maxCount 1 ;
+                                                 sh:order 1 ;
+                                                 sh:path gx:gps ] ;
+                                               sh:targetClass <http://www.w3.org/2006/vcard/ns#Address> .

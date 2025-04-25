@@ -1,0 +1,17 @@
+@prefix gx: <https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gx:CriteriaEvidenceShape a sh:NodeShape ;
+                         sh:property [ sh:datatype xsd:string ;
+                                       sh:description "Link to website to complete evidence information" ;
+                                       sh:maxCount 1 ;
+                                       sh:name "Website" ;
+                                       sh:path gx:website ],
+                         [ sh:datatype xsd:string ;
+                           sh:description "Link to attestation PDF to complete evidence information" ;
+                           sh:maxCount 1 ;
+                           sh:name "Attestation PDF" ;
+                           sh:path gx:pdf ] ;
+                         sh:targetClass gx:CriteriaEvidence .

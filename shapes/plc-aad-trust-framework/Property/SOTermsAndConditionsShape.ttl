@@ -1,0 +1,19 @@
+@prefix gx: <https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gx:SOTermsAndConditionsShape a sh:NodeShape ;
+                             sh:property [ sh:datatype xsd:string ;
+                                           sh:description "sha256 hash of the above document." ;
+                                           sh:maxCount 1 ;
+                                           sh:minCount 1 ;
+                                           sh:name "hash" ;
+                                           sh:path gx:hash ],
+                             [ sh:datatype xsd:string ;
+                               sh:description "a resolvable link to document" ;
+                               sh:maxCount 1 ;
+                               sh:minCount 1 ;
+                               sh:name "URL" ;
+                               sh:path gx:URL ] ;
+                             sh:targetClass gx:SOTermsAndConditions .

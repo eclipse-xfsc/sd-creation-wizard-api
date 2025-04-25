@@ -1,0 +1,31 @@
+@prefix gx: <https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gx:ServiceAccessPointShape a sh:NodeShape ;
+                           sh:closed false ;
+                           sh:description "A service access point is an identifying label for network endpoints used in the OSI model. The format below doesn’t represent all possible service access point types." ;
+                           sh:name "Service Access Point" ;
+                           sh:property [ sh:datatype xsd:string ;
+                                         sh:maxCount 1 ;
+                                         sh:order 1 ;
+                                         sh:path gx:host ],
+                           [ sh:datatype xsd:string ;
+                             sh:maxCount 1 ;
+                             sh:order 3 ;
+                             sh:path gx:version ],
+                           [ sh:datatype xsd:string ;
+                             sh:order 5 ;
+                             sh:path gx:openAPI ],
+                           [ sh:datatype xsd:string ;
+                             sh:maxCount 1 ;
+                             sh:order 0 ;
+                             sh:path gx:name ],
+                           [ sh:datatype xsd:string ;
+                             sh:order 2 ;
+                             sh:path gx:protocol ],
+                           [ sh:datatype xsd:string ;
+                             sh:order 4 ;
+                             sh:path gx:port ] ;
+                           sh:targetClass gx:ServiceAccessPoint .

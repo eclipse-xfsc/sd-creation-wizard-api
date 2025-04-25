@@ -1,0 +1,21 @@
+@prefix gx:  <https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh:  <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gx:LegalParticipantShape a sh:NodeShape ;
+                         sh:property [ sh:node gx:LegalParticipantShape ;
+                                       sh:path gx:subOrganization ],
+                         [ sh:minCount 1 ;
+                           sh:node gx:PostalAddressShape ;
+                           sh:path gx:headquarterAddress ],
+                         [ sh:minCount 1 ;
+                           sh:node gx:PostalAddressShape ;
+                           sh:path gx:legalAddress ],
+                         [ sh:node gx:LegalParticipantShape ;
+                           sh:path gx:parentOrganization ],
+                         [ sh:class gx:legalRegistrationNumber ;
+                           sh:minCount 1 ;
+                           sh:nodeKind sh:IRI ;
+                           sh:path gx:legalRegistrationNumber ] ;
+                         sh:targetClass gx:LegalParticipant .

@@ -1,0 +1,29 @@
+@prefix gx: <https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gx:legalRegistrationNumberShape a sh:NodeShape ;
+                                sh:message "At least one of taxID, vatID, EUID, EORI or leiCode must be defined." ;
+                                sh:or ( [ sh:minCount 1 ;
+                                          sh:path gx:taxID ] [ sh:minCount 1 ;
+                                                               sh:path gx:EUID ] [ sh:minCount 1 ;
+                                                                                   sh:path gx:EORI ] [ sh:minCount 1 ;
+                                                                                                       sh:path gx:vatID ] [ sh:minCount 1 ;
+                                                                                                                            sh:path gx:leiCode ] ) ;
+                                sh:property [ sh:datatype xsd:string ;
+                                              sh:minLength 3 ;
+                                              sh:path gx:EORI ],
+                                [ sh:datatype xsd:string ;
+                                  sh:minLength 3 ;
+                                  sh:path gx:vatID ],
+                                [ sh:datatype xsd:string ;
+                                  sh:minLength 3 ;
+                                  sh:path gx:EUID ],
+                                [ sh:datatype xsd:string ;
+                                  sh:minLength 3 ;
+                                  sh:path gx:taxID ],
+                                [ sh:datatype xsd:string ;
+                                  sh:minLength 3 ;
+                                  sh:path gx:leiCode ] ;
+                                sh:targetClass gx:legalRegistrationNumber .

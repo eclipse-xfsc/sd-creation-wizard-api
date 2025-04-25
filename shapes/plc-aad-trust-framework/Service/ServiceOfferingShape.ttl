@@ -1,0 +1,61 @@
+@prefix gx: <https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gx:ServiceOfferingShape a sh:NodeShape ;
+                        sh:or ( [ sh:property gx:dependsOnExists ] [ sh:property gx:dependsOnNotExists ] ),
+                        ( [ sh:property gx:aggregationOfExists ] [ sh:property gx:aggregationOfNotExists ] ) ;
+                        sh:property [ sh:description "a resolvable link to the service offering self-description related to the service and that can exist independently of it." ;
+                                      sh:minCount 1 ;
+                                      sh:name "terms & conditions" ;
+                                      sh:node gx:SOTermsAndConditionsShape ;
+                                      sh:path gx:termsAndConditions ],
+                        [ sh:datatype xsd:string ;
+                          sh:description "a list of data protection regime" ;
+                          sh:in ( "GDPR2016" "LGPD2019" "PDPA2012" "CCPA2018" "VCDPA2021" ) ;
+                          sh:message "Refer to https://gaia-x.gitlab.io/policy-rules-committee/trust-framework/service_and_subclasses/#service-offering Personal Data Protection Regimes" ;
+                          sh:name "data protection regime" ;
+                          sh:path gx:dataProtectionRegime ],
+                        [ sh:description "a resolvable link to the participant self-description providing the service." ;
+                          sh:maxCount 1 ;
+                          sh:minCount 1 ;
+                          sh:name "provided by" ;
+                          sh:node gx:LegalParticipant ;
+                          sh:path gx:providedBy ],
+                        [ sh:datatype xsd:string ;
+                          sh:description "a list of policy expressed using a DSL (e.g., Rego or ODRL) (access control, throttling, usage, retention, …)." ;
+                          sh:minCount 1 ;
+                          sh:name "policy" ;
+                          sh:path gx:policy ],
+                        [ sh:description "list of methods to export data from your user’s account out of the service" ;
+                          sh:minCount 1 ;
+                          sh:name "data account export" ;
+                          sh:node gx:DataAccountExportShape ;
+                          sh:path gx:dataAccountExport ] ;
+                        sh:targetClass gx:ServiceOffering .
+
+gx:aggregationOfExists sh:description "a resolvable link to the resources self-description related to the service and that can exist independently of it." ;
+                       sh:minCount 1 ;
+                       sh:name "aggregation of" ;
+                       sh:path gx:aggregationOf ;
+                       sh:qualifiedMinCount 1 ;
+                       sh:qualifiedValueShape [ sh:or ( [ sh:class gx:PhysicalResource ] [ sh:class gx:VirtualResource ] [ sh:class gx:DataResource ] [ sh:class gx:SoftwareResource ] ) ] .
+
+gx:aggregationOfNotExists sh:description "a resolvable link to the resources self-description related to the service and that can exist independently of it." ;
+                          sh:maxCount 0 ;
+                          sh:name "aggregation of" ;
+                          sh:path gx:aggregationOf .
+
+gx:dependsOnExists sh:description "a resolvable link to the service offering self-description related to the service and that can exist independently of it." ;
+                   sh:minCount 1 ;
+                   sh:name "depends on" ;
+                   sh:node gx:ServiceOfferingShape ;
+                   sh:path gx:dependsOn ;
+                   sh:qualifiedMinCount 1 ;
+                   sh:qualifiedValueShape [ sh:class gx:ServiceOffering ] .
+
+gx:dependsOnNotExists sh:description "a resolvable link to the service offering self-description related to the service and that can exist independently of it." ;
+                      sh:maxCount 0 ;
+                      sh:name "depends on" ;
+                      sh:path gx:dependsOn .

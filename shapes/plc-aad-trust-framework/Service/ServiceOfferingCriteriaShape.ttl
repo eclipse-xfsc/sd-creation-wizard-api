@@ -1,0 +1,379 @@
+@prefix gx: <https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gx:ServiceOfferingCriteriaShape a sh:NodeShape ;
+                                sh:property [ sh:description "Product safety and security: Provide appropriate mechanisms for cloud customers to enable product safety and security." ;
+                                              sh:maxCount 1 ;
+                                              sh:minCount 1 ;
+                                              sh:name "Criterion P3.1.20" ;
+                                              sh:node gx:CriteriaResponseShape ;
+                                              sh:path gx:P3.1.20 ],
+                                [ sh:description "The Provider shall ensure there are provisions governing the rights of the parties to use the service and any Customer Data therein." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 1 ;
+                                  sh:name "Criterion P1.2.2" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P1.2.2 ],
+                                [ sh:description "The Provider shall clearly define the technical and organizational measures in accordance with the roles and responsibilities of the parties, including an adequate level of detail." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 1 ;
+                                  sh:name "Criterion P2.1.3" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P2.1.3 ],
+                                [ sh:description "Incident Management: Ensure a consistent and comprehensive approach to the capture, assessment, communication and escalation of security incidents." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 1 ;
+                                  sh:name "Criterion P3.1.15" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P3.1.15 ],
+                                [ sh:description "The Provider shall define the roles and responsibilities of each party." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 1 ;
+                                  sh:name "Criterion P2.1.2" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P2.1.2 ],
+                                [ sh:description "For Label Level 3, Shareholders in the Provider, whose registered head office, headquarters and main establishment are not established in a Member State of the EU/EEA shall not, directly or indirectly, individually or jointly, hold control of the CSP. Control is defined as the ability of a natural or legal person to exercise decisive influence directly or indirectly on the CSP through one or more intermediate entities, de jure or de facto. (cf. Council Regulation No 139/2004 and Commission Consolidated Jurisdictional Notice under Council Regulation (EC) No 139/2004 for illustrations of decisive control)." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 0 ;
+                                  sh:name "Criterion P5.1.5" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P5.1.5 ],
+                                [ sh:description "Communication Security: Ensure the protection of information in networks and the corresponding information processing systems." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 1 ;
+                                  sh:name "Criterion P3.1.10" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P3.1.10 ],
+                                [ sh:description "The Provider shall communicate to the Customer where the applicable jurisdiction(s) of subcontractors will be." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 1 ;
+                                  sh:name "Criterion P1.2.7" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P1.2.7 ],
+                                [ sh:description "The Provider shall clearly identify for which parties the legal act is binding." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 1 ;
+                                  sh:name "Criterion P1.1.3" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P1.1.3 ],
+                                [ sh:description "Risk Management: Ensure that risks related to information security are properly identified, assessed, and treated, and that the residual risk is acceptable to the CSP." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 1 ;
+                                  sh:name "Criterion P3.1.3" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P3.1.3 ],
+                                [ sh:description "Information Security Policies: Provide a global information security policy, derived into policies and procedures regarding security requirements and to support business requirements." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 1 ;
+                                  sh:name "Criterion P3.1.2" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P3.1.2 ],
+                                [ sh:description "Physical Security: Prevent unauthorised physical access and protect against theft, damage, loss and outage of operations." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 1 ;
+                                  sh:name "Criterion P3.1.6" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P3.1.6 ],
+                                [ sh:description "Service Offering must provide a conformant self-description." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 1 ;
+                                  sh:name "Criterion P1.3.3" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P1.3.3 ],
+                                [ sh:description "The Provider shall clearly define if and to which extent third country transfer will take place." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 1 ;
+                                  sh:name "Criterion P2.2.3" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P2.2.3 ],
+                                [ sh:description "In case of a joint controllership, the Provider shall ensure an arrangement pursuant to Art. 26 (1) GDPR is in place." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 1 ;
+                                  sh:name "Criterion P2.3.1" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P2.3.1 ],
+                                [ sh:description "Self-Description attributes need to be consistent across linked Self-Descriptions." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 1 ;
+                                  sh:name "Criterion P1.3.4" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P1.3.4 ],
+                                [ sh:description "Organization of information security: Plan, implement, maintain and continuously improve the information security framework within the organisation." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 1 ;
+                                  sh:name "Criterion P3.1.1" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P3.1.1 ],
+                                [ sh:description "Procurement Management: Ensure the protection of information that suppliers of the CSP can access and monitor the agreed services and security requirements." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 1 ;
+                                  sh:name "Criterion P3.1.14" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P3.1.14 ],
+                                [ sh:description "The Provider shall include in the contract the contact details where Customer may address any queries regarding the Service Offering and the contract." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 1 ;
+                                  sh:name "Criterion P1.2.8" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P1.2.8 ],
+                                [ sh:description "The Provider shall offer the ability to establish a legally binding act. This legally binding act shall be documented." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 1 ;
+                                  sh:name "Criterion P1.1.1" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P1.1.1 ],
+                                [ sh:description "The Provider shall not access Customer Data unless authorized by the Customer or when the access is in accordance with EU/EEA/Member State law." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 1 ;
+                                  sh:name "Criterion P5.2.1" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P5.2.1 ],
+                                [ sh:description "Identity, Authentication and access control management: Limit access to information and information processing facilities." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 1 ;
+                                  sh:name "Criterion P3.1.8" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P3.1.8 ],
+                                [ sh:description "Dealing with information requests from government agencies: Ensure appropriate handling of government investigation requests for legal review, information to cloud customers, and limitation of access to or disclosure of Customer Data." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 1 ;
+                                  sh:name "Criterion P3.1.19" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P3.1.19 ],
+                                [ sh:description "Compliance: Avoid non-compliance with legal, regulatory, self-imposed or contractual information security and compliance requirements." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 1 ;
+                                  sh:name "Criterion P3.1.17" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P3.1.17 ],
+                                [ sh:description "The Provider shall implement practices for facilitating the switching of Providers and the porting of Customer Data in a structured, commonly used and machine-readable format including open standard formats where required or requested by the Customer." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 1 ;
+                                  sh:name "Criterion P4.1.1" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P4.1.1 ],
+                                [ sh:description "The Provider shall adopt the Gaia-X Trust Framework, by which Customers may verify Provider’s Service Offering." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 1 ;
+                                  sh:name "Criterion P1.2.9" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P1.2.9 ],
+                                [ sh:description "In case of a joint controllership, at a minimum, the Provider shall ensure that the very essence of such agreement is communicated to data subjects." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 1 ;
+                                  sh:name "Criterion P2.3.2" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P2.3.2 ],
+                                [ sh:description "Service Offering shall include a policy using a common Domain-Specific Language (DSL) to describe Permissions, Requirements and Constraints." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 1 ;
+                                  sh:name "Criterion P1.3.1" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P1.3.1 ],
+                                [ sh:description "Human Resources: Ensure that employees understand their responsibilities, are aware of their responsibilities with regard to information security, and that the organisation’s assets are protected in the event of changes in responsibilities or termination." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 1 ;
+                                  sh:name "Criterion P3.1.4" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P3.1.4 ],
+                                [ sh:description "For Label Level 3, the Provider’s registered head office, headquarters and main establishment shall be established in a Member State of the EU/EEA." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 0 ;
+                                  sh:name "Criterion P5.1.4" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P5.1.4 ],
+                                [ sh:description "The Provider shall ensure that the Consumer uses a verified identity provided by the Federator." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 1 ;
+                                  sh:name "Criterion P1.3.5" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P1.3.5 ],
+                                [ sh:description "The Provider shall define the audit rights for the Customer." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 1 ;
+                                  sh:name "Criterion P2.2.7" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P2.2.7 ],
+                                [ sh:description "Cryptography and Key management: Ensure appropriate and effective use of cryptography to protect the confidentiality, authenticity or integrity of information." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 1 ;
+                                  sh:name "Criterion P3.1.9" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P3.1.9 ],
+                                [ sh:description "For Label Level 3, in the event of recourse by the Provider, in the context of the services provided to the Customer, to the services of a third-party company - including a subcontractor - whose registered head office, headquarters and main establishment is outside of the European Union or who is owned or controlled directly or indirectly by another third-party company registered outside the EU/EEA, the third-party company shall have no access over the Customer Data nor access and identity management for the services provided to the Customer. The Provider, including any of its sub-processor, shall push back any request received from non-European authorities to obtain communication of Customer Data relating to European Customers, except if request is made in execution of a court judgment or order that is valid and compliant under Union law and applicable Member States law as provided by Article 48 GDPR." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 0 ;
+                                  sh:name "Criterion P5.1.6" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P5.1.6 ],
+                                [ sh:description "The Provider shall clearly define if and to the extent sub-processors will be involved, and the measures that are in place regarding sub-processors management." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 1 ;
+                                  sh:name "Criterion P2.2.6" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P2.2.6 ],
+                                [ sh:description "The Provider shall ensure that the legally binding act covers the entire provision of the Service Offering." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 1 ;
+                                  sh:name "Criterion P1.1.4" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P1.1.4 ],
+                                [ sh:description "For Label Level 3, the Provider must maintain continuous operating autonomy for all or part of the services it provides. The concept of operating autonomy shall be understood as the ability to maintain the provision of the cloud computing service by drawing on the provider’s own skills or by using adequate alternatives" ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 0 ;
+                                  sh:name "Criterion P5.1.7" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P5.1.7 ],
+                                [ sh:description "In case of a joint controllership, the Provider shall publish a point of contact for data subjects." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 1 ;
+                                  sh:name "Criterion P2.3.3" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P2.3.3 ],
+                                [ sh:description "The Provider shall have an option for each legally binding act to be governed by EU/EEA/Member State law." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 1 ;
+                                  sh:name "Criterion P1.1.2" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P1.1.2 ],
+                                [ sh:description "The Provider shall clearly define how Customer may instruct, including by electronic means such as configuration tools or APIs." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 1 ;
+                                  sh:name "Criterion P2.2.2" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P2.2.2 ],
+                                [ sh:description "Service Offering requires being operated by Service Offering Provider with a verified identity." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 1 ;
+                                  sh:name "Criterion P1.3.2" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P1.3.2 ],
+                                [ sh:description "For Label Level 3, the Provider shall process and store all Customer Data exclusively in the EU/EEA." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 0 ;
+                                  sh:name "Criterion P5.1.2" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P5.1.2 ],
+                                [ sh:description "Asset Management: Identify the organisation’s own assets and ensure an appropriate level of protection throughout their lifecycle." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 1 ;
+                                  sh:name "Criterion P3.1.5" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P3.1.5 ],
+                                [ sh:description "For Label Level 2, the Provider shall provide the option that all Customer Data are processed and stored exclusively in EU/EEA." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 0 ;
+                                  sh:name "Criterion P5.1.1" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P5.1.1 ],
+                                [ sh:description "The Provider shall offer the ability to establish a contract under Union or EU/EEA/Member State law and specifically addressing GDPR requirements." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 1 ;
+                                  sh:name "Criterion P2.1.1" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P2.1.1 ],
+                                [ sh:description "The Provider shall provide transparency on the environmental impact of the Service Offering provided" ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 1 ;
+                                  sh:name "Criterion P1.2.10" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P1.2.10 ],
+                                [ sh:description "The Provider shall declare the location of the processing of any Customer Data at urban area level." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 1 ;
+                                  sh:name "Criterion P1.2.5" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P1.2.5 ],
+                                [ sh:description "The Provider shall explain how information about subcontractors and related Customer Data localization will be communicated." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 1 ;
+                                  sh:name "Criterion P1.2.6" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P1.2.6 ],
+                                [ sh:description "The Provider shall ensure there are provisions governing changes, regardless of their kind." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 1 ;
+                                  sh:name "Criterion P1.2.3" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P1.2.3 ],
+                                [ sh:description "The Provider shall clearly define if and to the extent third country transfers will take place, and by which means of Chapter V GDPR these transfers will be protected." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 1 ;
+                                  sh:name "Criterion P2.2.4" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P2.2.4 ],
+                                [ sh:description "The Provider shall ensure there are specific provisions regarding service interruptions and business continuity (e.g., by means of a service level agreement), Provider’s bankruptcy or any other reason by which the Provider may cease to exist in law." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 1 ;
+                                  sh:name "Criterion P1.2.1" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P1.2.1 ],
+                                [ sh:description "The Provider shall ensure pre-contractual information exists, with sufficiently detailed, clear and transparent information regarding the processes of Customer Data portability, technical requirements, timeframes and charges that apply in case a professional user wants to switch to another Provider or port Customer Data back to its own IT systems." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 1 ;
+                                  sh:name "Criterion P4.1.2" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P4.1.2 ],
+                                [ sh:description "The Provider shall be ultimately bound to instructions of the Customer." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 1 ;
+                                  sh:name "Criterion P2.2.1" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P2.2.1 ],
+                                [ sh:description "Operational Security: Ensure proper and regular operation, including appropriate measures for planning and monitoring capacity, protection against malware, logging and monitoring events, and dealing with vulnerabilities, malfunctions and failures." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 1 ;
+                                  sh:name "Criterion P3.1.7" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P3.1.7 ],
+                                [ sh:description "The Provider shall ensure there are provisions governing aspects regarding copyright or any other intellectual property rights." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 1 ;
+                                  sh:name "Criterion P1.2.4" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P1.2.4 ],
+                                [ sh:description "User documentation: Provide up-to-date information on the secure configuration and known vulnerabilities of the cloud service for cloud customers." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 1 ;
+                                  sh:name "Criterion P3.1.18" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P3.1.18 ],
+                                [ sh:description "Change and Configuration Management: Ensure that changes and configuration actions to information systems guarantee the security of the delivered cloud service." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 1 ;
+                                  sh:name "Criterion P3.1.12" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P3.1.12 ],
+                                [ sh:description "Portability and Interoperability: The CSP shall provide a means by which a customer can obtain their stored customer data, and provide documentation on how (where appropriate, through documented API’s) the CSC can obtain the stored data at the end of the contractual relationship and shall document how the data will be securely deleted from the Cloud Service Provider in what timeframe." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 1 ;
+                                  sh:name "Criterion P3.1.11" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P3.1.11 ],
+                                [ sh:description "Business Continuity: Plan, implement, maintain and test procedures and measures for business continuity and emergency management." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 1 ;
+                                  sh:name "Criterion P3.1.16" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P3.1.16 ],
+                                [ sh:description "For Label Level 3, where the Provider or subcontractor is subject to legal obligations to transmit or disclose Customer Data on the basis of a non-EU/EEA statutory order, the Provider shall have verified safeguards in place to ensure that any access request is compliant with EU/EEA/Member State law." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 0 ;
+                                  sh:name "Criterion P5.1.3" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P5.1.3 ],
+                                [ sh:description "The Provider shall clearly define if and to which extent sub-processors will be involved." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 1 ;
+                                  sh:name "Criterion P2.2.5" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P2.2.5 ],
+                                [ sh:description "Development of Information systems: Ensure information security in the development cycle of information systems." ;
+                                  sh:maxCount 1 ;
+                                  sh:minCount 1 ;
+                                  sh:name "Criterion P3.1.13" ;
+                                  sh:node gx:CriteriaResponseShape ;
+                                  sh:path gx:P3.1.13 ] ;
+                                sh:targetClass gx:ServiceOfferingCriteria .

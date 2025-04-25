@@ -1,0 +1,57 @@
+@prefix gx: <https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gx:PhysicalResourceShape a sh:NodeShape ;
+                         sh:closed false ;
+                         sh:description "A Physical resource is, but not limited to, a datacenter, a bare-metal service, a warehouse, a plant. Those are entities that have a weight and position in physical space." ;
+                         sh:name "Physical Resource" ;
+                         sh:property [ sh:description "A resolvable link of resources related to the resource and that can exist independently of it." ;
+                                       sh:name "aggregation of" ;
+                                       sh:or ( [ sh:class gx:VirtualResource ] [ sh:class gx:PhysicalResource ] ) ;
+                                       sh:order 5 ;
+                                       sh:path gx:aggregationOf ],
+                         [ sh:datatype xsd:string ;
+                           sh:description "A free text description of the entity." ;
+                           sh:maxCount 1 ;
+                           sh:name "description" ;
+                           sh:order 7 ;
+                           sh:path gx:description ],
+                         [ sh:class <http://www.w3.org/2006/vcard/ns#Address> ;
+                           sh:description "A list of physical locations." ;
+                           sh:minCount 0 ;
+                           sh:node <http://www.w3.org/2006/vcard/ns#AddressShape> ;
+                           sh:order 3 ;
+                           sh:path gx:locationAddress ],
+                         [ sh:datatype xsd:string ;
+                           sh:description "A human readable name of the entity." ;
+                           sh:maxCount 1 ;
+                           sh:name "name" ;
+                           sh:order 6 ;
+                           sh:path gx:name ],
+                         [ sh:description "A list of resolvable links to Gaia-X Credentials of participant owning the resource." ;
+                           sh:name "owned by" ;
+                           sh:class gx:LegalParticipant ;
+                           sh:nodeKind sh:IRI ;
+                           sh:order 1 ;
+                           sh:path gx:ownedBy ],
+                         [ sh:description "A list of resolvable links to Gaia-X Credentials of participants maintaining the resource in operational condition and thus having physical access to it." ;
+                           sh:minCount 1 ;
+                           sh:name "maintained by" ;
+                           sh:class gx:LegalParticipant ;
+                           sh:nodeKind sh:IRI ;
+                           sh:order 0 ;
+                           sh:path gx:maintainedBy ],
+                         [ sh:description "A list of resolvable links to Gaia-X Credentials of participant manufacturing the resource." ;
+                           sh:name "manufactured by" ;
+                           sh:class gx:LegalParticipant ;
+                           sh:nodeKind sh:IRI ;
+                           sh:order 2 ;
+                           sh:path gx:manufacturedBy ],
+                         [ sh:datatype xsd:string ;
+                           sh:description "a list of physical GPS in ISO 6709:2008/Cor 1:2009 format." ;
+                           sh:minCount 0 ;
+                           sh:order 4 ;
+                           sh:path gx:location ] ;
+                         sh:targetClass gx:PhysicalResource .

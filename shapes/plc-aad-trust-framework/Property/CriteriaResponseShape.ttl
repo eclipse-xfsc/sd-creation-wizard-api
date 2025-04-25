@@ -1,0 +1,20 @@
+@prefix gx:  <https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh:  <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gx:CriteriaResponseShape a sh:NodeShape ;
+                         sh:property [ sh:maxCount 1 ;
+                                       sh:name "Evidence" ;
+                                       sh:node gx:CriteriaEvidenceShape ;
+                                       sh:path gx:evidence ],
+                         [ sh:in ( "Confirm" "Deny" "Not applicable" ) ;
+                           sh:maxCount 1 ;
+                           sh:minCount 1 ;
+                           sh:name "Response" ;
+                           sh:path gx:response ],
+                         [ sh:datatype xsd:string ;
+                           sh:maxCount 1 ;
+                           sh:name "Optional reason when not applicable" ;
+                           sh:path gx:reason ] ;
+                         sh:targetClass gx:CriteriaResponse .
