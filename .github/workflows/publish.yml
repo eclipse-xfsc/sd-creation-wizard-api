@@ -6,6 +6,10 @@ on:
   workflow_dispatch:
   
 jobs:
+  maven-build:
+    uses: eclipse-xfsc/dev-ops/.github/workflows/maven-build.yml@main
+    with:
+      java_version: '18'
   dockerbuild:
     uses: eclipse-xfsc/dev-ops/.github/workflows/dockerbuild.yml@main
     secrets: inherit
